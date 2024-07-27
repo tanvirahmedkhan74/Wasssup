@@ -1,5 +1,5 @@
-let APP_ID = "d66ddff4436747ab94e51a9193268593";
-let token = "007eJxTYJjo5VtUo2otL9FbF3VKxGLxM8EZRkuqM1PfHnr5+HHbqeMKDClmZikpaWkmJsZm5ibmiUmWJqmmhomWhpbGRmYWppbG17yXpjUEMjI46nazMDJAIIjPxpBcWpSWWs7AAABovx/c";
+let APP_ID = "ADD_YOUR_AGORA_PROJECT_ID";
+let token = null;
 
 let uid = String(Math.floor(Math.random() * 10000));
 
@@ -38,7 +38,7 @@ let init = async () => {
     client = new AgoraRTM.createInstance(APP_ID);
     await client.login({uid, token});
 
-    channel = client.createChannel("curfew");
+    channel = client.createChannel(roomId);
     await channel.join();
 
     channel.on('MemberJoined', handleJoinedUser);
