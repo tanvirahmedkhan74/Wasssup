@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Wassup Lobby!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="lobby.css">
+    </head>
+    <body>
+        <main id="lobby-container">
+            <div id="form-container">
+                <div id="form__container__header">
+                    <p>👋 Create OR Join a Room</p>
+                </div>
+    
+                <div id="form__content__wrapper">
+                    <form id="join-form">
+                        <input type="text" name="invite_code" required/>
+                        <input type="submit" value="Join Room" />
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <script>
+        let form = document.getElementById('join-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let roomId = e.target.invite_code.value;
+            window.location = `index.html?room=${roomId}`;
+        })
+    </script>
+</html>
