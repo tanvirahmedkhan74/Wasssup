@@ -8,3 +8,4 @@ A peer to peer WebRTC application with controls
 ```javascript
 let APP_ID = "YOU-APP-ID"
 ```
+# Thanks goes to Traversy Media (Youtube)
